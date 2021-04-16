@@ -1,4 +1,5 @@
-Q1
+Java Enterprise Week6 Question2
+
 Method 1
 You can send a Cookie with the same name to the browser, because the browser is based on the name of the Cookie 
 (in fact, there are path, domain, do not set the default is the same) to distinguish a Cookie.
