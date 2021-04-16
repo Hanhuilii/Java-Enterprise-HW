@@ -1,0 +1,112 @@
+JavaEnterprise Week2 Optional Question
+
+1.After configuring the Tomcat server, to realize the reverse proxy through nginx, you need to modify the configuration file of nginx,
+go to the nginx directory, and find the nginx.conf File, open it in Notepad.
+
+#Nginx所用用户和组，window下不指定  
+#user  niumd niumd;  
+
+#工作的子进程数量（通常等于CPU数量或者2倍于CPU）  
+worker_processes  2;  
+
+#错误日志存放路径  
+#error_log  logs/error.log;  
+#error_log  logs/error.log  notice;  
+error_log  logs/error.log  info;  
+
+#指定pid存放文件  
+pid        logs/nginx.pid;  
+
+events {  
+    #使用网络IO模型linux建议epoll，FreeBSD建议采用kqueue，window下不指定。  
+    #use epoll;  
+
+    #允许最大连接数  
+    worker_connections  2048;  
+}  
+
+http {  
+    include       mime.types;  
+    default_type  application/octet-stream;  
+
+        #定义日志格式  
+    #log_format  main  '$remote_addr - $remote_user [$time_local] $request '  
+    #                  '"$status" $body_bytes_sent "$http_referer" '  
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';  
+
+    #access_log  off;  
+    access_log  logs/access.log;  
+
+    client_header_timeout  3m;  
+    client_body_timeout    3m;  
+    send_timeout           3m;  
+
+    client_header_buffer_size    1k;  
+    large_client_header_buffers  4 4k;  
+
+    sendfile        on;  
+    tcp_nopush      on;  
+    tcp_nodelay     on;  
+
+    #keepalive_timeout  75 20;  
+
+    #include    gzip.conf;  
+    upstream localhost{  
+    #Nginx是如何实现负载均衡的，Nginx的upstream目前支持以下几种方式的分配
+    #1、轮询（默认）
+    #每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除。
+    #2、weight
+    #指定轮询几率，weight和访问比率成正比，用于后端服务器性能不均的情况。
+    #2、ip_hash
+    #每个请求按访问ip的hash结果分配，这样每个访客固定访问一个后端服务器，可以解决session的问题。
+    #3、fair（第三方）
+    #按后端服务器的响应时间来分配请求，响应时间短的优先分配。
+    #4、url_hash（第三方）
+    #按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，后端服务器为缓存时比较有效。  
+      #ip_hash; 
+
+      server localhost:8080;  
+      server localhost:8088;
+     }  
+
+    server {  
+            listen       80;  
+            server_name  localhost;     
+
+            location / {  
+                   proxy_connect_timeout 3; #nginx跟后端服务器连接超时时间(代理连接超时) 
+                   proxy_send_timeout 30; #后端服务器数据回传时间(代理发送超时) 
+                   proxy_read_timeout 30; #连接成功后，后端服务器响应时间(代理接收超时) 
+                   proxy_pass http://localhost;
+
+   }  
+}     }  
+
+ps:
+  The places that need to be set are:
+Tomcat server port number: server localhost:8080; server localhost:8088; These two port numbers are used to enable multiple Tomcat servers on a single machine.
+
+  After modifying the configuration file, you need to reload the configuration file to take effect.
+
+Nginx-s reload does not check for errors in the nginx.conf file.
+Nginx-t will check for errors in the nginx.conf file and will give you an error message, so this command is recommended.
+
+•Final result
+Type localhost in the browser.
+After a few refreshes, you might switch to a single server, thus achieving load balancing.
+Let me write a picture here
+
+Possible problems:
+When setting the default listen 80 port in your Nginx configuration file, you may not be able to reverse-proxying. When you type 'localhost' in your browser,
+you may not be able to redirect to Tomcat's home page. There are two ways to do this:
+
+1. Change the port number of Listen in your NGINX configuration file to a different port (e.g. 9090). This will enable you to switch to localhost:9090.
+
+2.Since port 80 is already occupied, we just need to release this port. Using"cmd->netstat -ano 80"to see if port 80 is being used:
+
+To see which process or program is occupying port 80, use the PID number:
+Let me write a picture here
+Results are nginx. Exe itself, it can't pass the kill pid is released this port.
+
+Later Baidu found that the original port is also occupied by the system, the solution: enter the registry
+Find the HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/HTTP Start to modify its value is 0, and then restart the computer.
