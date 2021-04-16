@@ -1,7 +1,0 @@
-对maven web项目打包并放入tomcat进行运行：
-打开界面右侧“Maven”； 
-“testweb Maven Webapp” “Lifecircle” “package” 右键“Run Maven Build”；
-“install”右键 “Run ‘testweb[install]”；
-在本地磁盘下找到“testweb.war”进行拷贝；
-找到tomcat安装目录，拷贝至 “webapp”；
-打开 “bin”目录，点击“startup.bar”,即可访问。
