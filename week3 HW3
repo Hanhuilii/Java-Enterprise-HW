@@ -1,4 +1,5 @@
-JavaEnterprise Week3 Question2\3 on Github
+JavaEnterprise Week3 Question2\3 on Github:
+Output an avatar dynamically in a doGet() method. You may use a thirdparty lib, such as avatar-generator.
 
 • Implement a simple username length validation:
 Requirement: User name limit length is 3 to 5 characters.
