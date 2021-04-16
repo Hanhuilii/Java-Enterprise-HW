@@ -1,4 +1,6 @@
-Java Enterprise Week6 Question2
+Java Enterprise Week5 Question2:
+(Cookie 2) By default, your browser would accept cookies, so response.encodeURL does not necessarily fall back to URL rewriting.
+Try to disable the cookies for localhost in your browser.
 
 How to disable cookies in Chrome browser?
 
