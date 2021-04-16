@@ -1,4 +1,5 @@
-JavaEnterprise Week1 Optional Question1
+JavaEnterprise Week1 Optional Question1:
+Re-implement a tiny HTTP server using Java NIO, and then use Apache JMeter to test the performance of this tiny HTTP server.
 
 Simple HTTP based on Java NIO:
 
