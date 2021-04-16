@@ -1,4 +1,7 @@
-Java Enterprise Week6 Question4
+Java Enterprise Week5 Question4:
+Imagine there is a text file that stores the name password information.
+Please authenticate the user based on this file,
+and display error message such as wrong password, no such user.
 
 •index.jsp
 
