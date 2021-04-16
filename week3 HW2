@@ -1,0 +1,8 @@
+Java Enterprise Week3 Question2
+
+Pack up your Maven Web project and put it into Tomcat to run: 
+[process]
+step1:Open "Maven" on the right side of the screen; 
+step2:"TestWeb Maven Webapp" "Lifecircle" "package" right-click "Run Maven Build"; step3:"Install" right-click "Run 'testweb[install]"; Find "testweb.war" on your local disk and copy it; 
+step4:Find the Tomcat installation directory and copy it to "WebApp".
+step5: Open the "bin" directory and click "startup.bar" to access it.
