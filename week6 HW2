@@ -1,0 +1,86 @@
+Java Enterprise Week6 Question2
+
+How to disable cookies in Chrome browser?
+
+Google Chrome(桌面版) (Google Chrome (Desktop))
+
+step1:
+Click the three-dot icon menu in the upper-right corner to get the Chrome menu.
+step2:
+Select "More tools > Clear browsing data". 
+step3:
+In the pop-up box, check off the third and fourth boxes to delete cookies and clear cached images and files. Just pick a timeframe from the menu at the top.
+
+To manage the cookies in Chrome:
+Type “ chrome://settings/content/cookies” in the omnibox (without the quote marks). 
+Tell Chrome to allow data from local sites you actually visit, only keep data until you close the browser, or block cookies altogether. 
+The best option: Block all third-party cookies. You can also set exceptions—if you block all cookies, you might to still allow them 
+( for example, Amazon and NYTimes.com), just so you don’t have to re-type your password all the time.
+
+Google Chrome browser
+
+step1:
+Open up the Google Chrome browser, click on the three small dots in the upper right corner, and then select Settings.
+step2:
+Click on the Settings with three bars in the top left corner.
+step3:
+Select "Advanced."
+step4:
+Select Privacy Settings and Security.
+step5:
+Select Content Settings.
+step6:
+Select the "cookies".
+step7:
+Turn off "Allow Sites to Save and Read Cookie Data" and block third party cookies.
+
+Mozilla Firefox
+
+step1:
+Click the upper-right hamburger stack and select Options > Privacy & Security. 
+step2:
+Under Cookies and Site Data, click Clear Data > Cookies and Site Data > Clear to remove your entire cookie history.
+step3:
+Back to Cookies and Site Data, select Manage Data if you want to choose the sites from which to remove cookies. 
+There’s also a checkbox to Delete cookies and site data when Firefox is closed. 
+But that may be overkill. Under Manage Exceptions, create Exceptions to always (or never) accept cookies from select sites.
+
+Firefox(Android) (Firefox (Android))
+
+Go to the three-dot menu and select Settings > Privacy > Cookies.
+You get three choices: Enabled, Enabled Excluding 3rd Party, or Disabled. To erase all cookies, on the Privacy screen, check the box by Clear Private Data on Exit. You’ll get another pop-up to pick Cookies & Active Logins, among other settings.
+
+Microsoft Edge
+
+Internet Explorer is ( mostly) dead, long live Microsoft Edge. To clear cookies:
+step1
+Select the three-dot menu and select Settings. 
+Click the hamburger menu on the top left and select "Privacy and services". 
+step2
+Under Clear browsing data, click "Choose what to clear". Some options will be pre-selected; can click or de-select the items you want to delete. 
+step3
+Click Clear now. Back under "Clear browsing data", you can also choose what gets cleared every time you close the browser.
+
+Safari(macOS) (Safari (macOS))
+By default, Safari is only taking cookies from sites you visit—not third-party cookies. You can make changes by:
+step1
+Going to the Safari menu (a gear icon) and selecting Preferences > Privacy and looking under Cookies and website data > Manage Website Data. 
+step2
+From there, pick the sites whose cookies you crush; click Remove All > Remove Now to kill all cookies.
+ps:
+If you’d like to manage how Safari handles cookies, look for the option to Block All Cookies on that same Privacy tab.
+To manage the cookies Safari will accept, click any site under Cookies and Website data to have Safari ask sites and third parties not to track you. 
+Safari may ask on your behalf every time, but it’s up to individual websites whether they’ll comply or not.
+
+Safari(iOS) (Safari (iOS))
+
+With Safari, you don’t access the cookie settings by opening the browser itself. In iOS, go to Settings > Safari and toggle Block All Cookies to on.
+①To kill all cookies, choose Clear History and Website Data. 
+②To kill only select cookie data stored by websites (and keep your History):
+step1
+Scroll down to "Advanced > Website Data". You’ll get a list of the sites storing the most data; 
+step2
+At the bottom of the list click "Show All Sites to see the full list". Delete the data for sites you don’t recognize or trust by swiping left; 
+step3
+Clear them all by clicking Remove All Website Data at the bottom.
+
