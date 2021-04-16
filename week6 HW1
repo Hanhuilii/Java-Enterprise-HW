@@ -1,0 +1,68 @@
+Q1
+Method 1
+You can send a Cookie with the same name to the browser, because the browser is based on the name of the Cookie 
+(in fact, there are path, domain, do not set the default is the same) to distinguish a Cookie.
+if the two cookies sent before and after the same name, the browser will think that is the same Cookie,
+Then the later sent Cookie will overwrite the previous sent Cookie, and the later sent Cookie has set MAXAGE to 0,
+and the browser will delete the later sent Cookie immediately after receiving it.
+Method2: Servlet implements Cookei deletion
+
+package com.tsinghua;
+ 
+ 
+import javax.servlet.http.*;
+import java.io.*;
+ 
+public class CookieTest3 extends HttpServlet{
+ 
+ //处理get请求
+ 
+ public void doGet(HttpServletRequest req,HttpServletResponse res){
+  
+  
+  try {
+   
+ 
+   res.setContentType("text/html;charset=gbk");
+  
+   PrintWriter pw=res.getWriter();
+  
+   //从客户端得到所有cookie信息
+   Cookie [] allCookies=req.getCookies();
+  
+   int i=0;
+   //如果allCookies不为空...
+   if(allCookies!=null){
+   
+    //从中取出cookie
+    for(i=0;i<allCookies.length;i++){
+    
+     //依次取出
+     Cookie temp=allCookies[i];
+    
+     if(temp.getName().equals("color")){
+      
+      //将该cookie删除
+      temp.setMaxAge(0);
+      pw.println("删除了color这个cookie");
+      break;
+      
+     }
+    }  
+   
+   } 
+  
+  }
+     catch (Exception ex) {
+      
+      ex.printStackTrace();
+     }
+ 
+ }
+}
+Result of Remove "cookie" :
+The welcome back screen is not displayed
+ps
+After the deletion, all the previously visited addresses and some auto-filled login passwords of the user will be deleted. 
+For example, the user has logged in the forum, the user can set the automatic login after opening the webpage,
+but if the Cookie is deleted, the user cannot automatically log in, the Cookie stores these information.
