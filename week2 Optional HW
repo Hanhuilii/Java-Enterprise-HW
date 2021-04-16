@@ -1,4 +1,5 @@
-JavaEnterprise Week2 Optional Question
+JavaEnterprise Week2 Optional Question:
+Try to deploy Tomcat and NGINX to achieve performance load balance.
 
 1.After configuring the Tomcat server, to realize the reverse proxy through nginx, you need to modify the configuration file of nginx,
 go to the nginx directory, and find the nginx.conf File, open it in Notepad.
