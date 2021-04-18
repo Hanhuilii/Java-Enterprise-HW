@@ -129,11 +129,6 @@ private Headers parseHeader(String headerStr) {
     String firstLine = headerStr.substring(0, index);
     String[] parts = firstLine.split(" ");
 
-    /*
-     * 请求头的第一行必须由三部分构成，分别为 METHOD PATH VERSION
-     * 比如：
-     *     GET /index.html HTTP/1.1
-     */
     if (parts.length < 3) {
         throw new InvalidHeaderException();
     }
