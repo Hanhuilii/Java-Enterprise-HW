@@ -113,11 +113,11 @@ public class UpImgServlet extends HttpServlet {
         try {
             List<FileItem> fileItems= sfu.parseRequest(request);  //解码请求 得到所有表单元素
             for (FileItem fi : fileItems) {
-                //有可能是 文件，也可能是普通文字 
-                if (fi.isFormField()) { //这个选项是 文字 
+               
+                if (fi.isFormField()) { 
                     System.out.println("表单值为："+fi.getString());
                 }else{
-                    // 是文件
+                   
                  //获取图片后缀名
                     String format=fi.getName().substring(fi.getName().indexOf("."), fi.getName().length());
                     //图片命名
