@@ -1,63 +1,93 @@
 JavaEnterprise Week1 Optional Question2:
 Design an icon (ico or .png) for our course.
 
+package swing;
+
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Graphics;
+
+import javax.swing.Icon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
+
+public class DrawIcon implements Icon {
+    private int width;//声明图标的宽
+    private int height;//声明图标的长
+    @Override
+    public int getIconHeight() {
+        return this.height;
+    }
+    @Override
+    public int getIconWidth() {
+        return this.width;
+    }
+    public DrawIcon(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+    @Override
+    public void paintIcon(Component arg0, Graphics arg1, int x , int y) {
+        arg1.fillOval(x, y, width, height);//绘制一个圆
+    }
+public static void main(String[] args) {
+        
+        DrawIcon icon=new DrawIcon(15,15);
+        //创建一个标签，使标签文字居中
+        JLabel j=new JLabel("测试",icon,SwingConstants.CENTER);
+        JFrame jf=new JFrame();
+        Container c=jf.getContentPane();
+        c.add(j);
+        //设置容器的背景颜色
+        c.setBackground(Color.white);
+        //设置窗体可视
+        jf.setVisible(true);
+        //设置窗体大小
+        jf.setSize(200, 150);
+        //设置窗体关闭方式
+        jf.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+    }
+
+
+PS:
 Regarding an icon, there are six ways to implement an icon
+Img method;
+Background method;
+CSS sprites method;
+The font method;
+SVG method;
+The CSS method;
 
-Img method
-
-Background method
-
-CSS sprites method
-
-The font method
-
-SVG method
-
-The CSS method
-
- 
-
-1, the method of img
+ 1, the method of img
 
 As the name implies, insert the image with the img tag.
-
 Disadvantages: too many images, increase the server request, of course you can use the CDN.
 
- 
-
-2, and the method of background
+ 2, and the method of background
 
 Place the image in the CSS background tag. The background attribute controls the image's center, tiling, landscape, or vertical adaptation. 
 It is better to use the background attribute than the img tag for more complex image processing.
 
- 
-
-3, CSS Sprites
+ 3, CSS Sprites
 
 In China, it is generally called Sprite or Spirit Map. 
 The idea is to assemble several pictures into a background image, 
 and then selectively display a part of the background image to achieve the purpose of displaying different ICONS.
-
 Advantages: Reduced requests.
-
 You can use the online CSS sprites generator to generate, and then copy and paste the location code of each icon.
-
-https://spritegen.website-performance.org/
-
- 
-
-4, the font
+ 
+ 4, the font
 
 Simply put, it is to use font as icon. Some designers make some commonly used icon sets into a set of fonts, 
 and type the icon through font selection, which is a little like the special symbol of sogou input method, 
 but the size is not easy to adjust, so font-size should be used.
-
- 
-
-5, and the method of SVG
+ 
+ 5, and the method of SVG
 
 At present, the more popular method is to use SVG vector graph to make icon icon. For example,
 Alibaba vector icon library, such as search iPhone, there will be a lot of SVG pictures designed by designers for you to use, 
 select the picture to create a project, generate JS code, according to the tutorial will be generated on the site icon code copy to your code.
-
 Advantages: No jagged picture no matter how large it is placed.
