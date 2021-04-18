@@ -122,8 +122,8 @@ public class UpImgServlet extends HttpServlet {
                     String format=fi.getName().substring(fi.getName().indexOf("."), fi.getName().length());
                     //图片命名
                     fn=UUID.randomUUID().toString().replaceAll("-", "")+format;
-                    System.out.println("文件名是："+fn);  //文件名 
-                    // fn 是可能是这样的 c:\abc\de\tt\fish.jpg
+                    System.out.println("文件名是："+fn);   
+                    
                     fi.write(new File(path,fn));
                      
                 }                
