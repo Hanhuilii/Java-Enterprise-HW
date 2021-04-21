@@ -1,8 +1,0 @@
-Simple HTTP based on Java NIO:
-
-[Code logic]
-①Handle the request and parse the request header.
-②Responds to the request, obtains the resource path from the request header, and checks whether the requested resource path is valid.
-③Match Content-Type according to file suffix.
-④Read the file data and set the Content-Length to 404 if the file does not exist.
-⑤Sets the response header and returns the response header and data to the browser.
