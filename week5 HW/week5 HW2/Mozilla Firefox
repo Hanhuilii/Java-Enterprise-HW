@@ -1,0 +1,10 @@
+Mozilla Firefox
+
+step1:
+Click the upper-right hamburger stack and select Options > Privacy & Security. 
+step2:
+Under Cookies and Site Data, click Clear Data > Cookies and Site Data > Clear to remove your entire cookie history.
+step3:
+Back to Cookies and Site Data, select Manage Data if you want to choose the sites from which to remove cookies. 
+There’s also a checkbox to Delete cookies and site data when Firefox is closed. 
+But that may be overkill. Under Manage Exceptions, create Exceptions to always (or never) accept cookies from select sites.
