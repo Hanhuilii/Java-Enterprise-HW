@@ -1,0 +1,11 @@
+Safari(macOS) (Safari (macOS))
+
+By default, Safari is only taking cookies from sites you visit—not third-party cookies. You can make changes by:
+step1
+Going to the Safari menu (a gear icon) and selecting Preferences > Privacy and looking under Cookies and website data > Manage Website Data. 
+step2
+From there, pick the sites whose cookies you crush; click Remove All > Remove Now to kill all cookies.
+ps:
+If you’d like to manage how Safari handles cookies, look for the option to Block All Cookies on that same Privacy tab.
+To manage the cookies Safari will accept, click any site under Cookies and Website data to have Safari ask sites and third parties not to track you. 
+Safari may ask on your behalf every time, but it’s up to individual websites whether they’ll comply or not.
