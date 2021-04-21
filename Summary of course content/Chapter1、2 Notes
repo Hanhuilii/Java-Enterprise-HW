@@ -1,3 +1,4 @@
+Chapter1
 P6  HTTP HTML P10 HTTP 请求流、响应流
 P7  HTML标签
 P13-17  get post
@@ -11,6 +12,7 @@ P31  JSP
 “客户”指浏览器应用，浏览器：软件，与服务器通信，解释HTML代码 P5
 HTTP超文本传输协议 客户与服务器 
 HTML超文本标记语言 告知浏览器如何显示页面 P6
+
 Chapter2
 P39-P43  container定义、作用、如何处理请求
 P46  servlet名的映射
