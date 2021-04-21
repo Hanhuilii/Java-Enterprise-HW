@@ -1,7 +1,4 @@
 Java Enterprise Week3 Question1:
-Output an avatar dynamically in a doGet() method. You may use a thirdparty lib, such as avatar-generator.
-
-•index.jsp
 
 <%@ page import="java.util.*" %> 
    <!DOCTYPE html> 
