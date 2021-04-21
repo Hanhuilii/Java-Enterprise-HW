@@ -1,0 +1,14 @@
+(Google Chrome (Desktop))
+
+step1:
+Click the three-dot icon menu in the upper-right corner to get the Chrome menu.
+step2:
+Select "More tools > Clear browsing data". 
+step3:
+In the pop-up box, check off the third and fourth boxes to delete cookies and clear cached images and files. Just pick a timeframe from the menu at the top.
+
+To manage the cookies in Chrome:
+Type “ chrome://settings/content/cookies” in the omnibox (without the quote marks). 
+Tell Chrome to allow data from local sites you actually visit, only keep data until you close the browser, or block cookies altogether. 
+The best option: Block all third-party cookies. You can also set exceptions—if you block all cookies, you might to still allow them 
+( for example, Amazon and NYTimes.com), just so you don’t have to re-type your password all the time.
