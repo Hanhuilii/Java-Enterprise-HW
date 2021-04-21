@@ -100,19 +100,11 @@ public class HttpParser {
 
  attribute.put(key, value);
 
- }
+ } }
 
- }
+ } }
 
- }
-
- }
-
- request.setAttribute(attribute);
-
- }
-
- }
+ request.setAttribute(attribute);}}
 
  return request;
 
@@ -150,7 +142,7 @@ public class HttpParser {
 
  resBuild.append("\r\n");
 
- });
+ }};
 
  resBuild.append("\r\n");
 
