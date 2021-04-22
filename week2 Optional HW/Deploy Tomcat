@@ -1,4 +1,4 @@
-1. Install relevant dependency packages, JDK, and configure the Java environment
+1.Install relevant dependency packages, JDK, and configure the Java environment
 
 Description: The JDK is a software development kit for the Java language, which contains the Java Virtual Machine (JVM). 
 The compiled Java source program can form Java bytecode, and as long as the JDK is installed, these bytecode files can be interpreted by JVM, 
@@ -12,3 +12,30 @@ vim /etc/profile.d/fava.sh
 export JAVA_HOME=/usr/local/java      //设置Java根目录
 export PATH=$PATH:$JAVA_HOME/bin      //在PATH环境变量中添加JAVA根目录下的bin/子目录
 source /etc/profile.d/java.sh
+
+2.Install and configure Tomcat
+
+tar xzf apache-tomcat-*.tar.gz -C /usr/src
+mv /usr/src/apache-tomcat-* /usr/local/tomcat7
+/usr/local/tomcat7/bin/startup.sh             //启动Tomcat
+
+3.Tomcat configuration related instructions
+
+| - bin / : store Windows or Linux platform startup and shutdown Tomcat script file
+| - conf / : Tomcat server various global configuration file
+| - lib / : deposit Tomcat run need libraries (JARS)
+| - logs: deposit Tomcat implementation of the LOG file
+| - webapps: Tomcat's main Web publishing directory
+| - work: deposit JSP compiled class files
+
+4.Conf/the contents of the file
+
+Catalina. policy: Permission control configuration file
+Catalina.properties: Tomcat properties profile
+XML: Context configuration file
+Logging.properties: Log related configuration files
+Server.xml: The master configuration file
+Tomcat -Users.xml: Manager-GUI to manage user profiles (Tomcat provides a Manager-GUI interface after installation, which can be accessed via this file configuration)
+Web.xml: Tomcat's Servlet, Servlet-Mapping, Filter, MIME and other related configuration.
+
+Note: When deploying other Tomcat, versions must be consistent.
