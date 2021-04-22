@@ -70,9 +70,5 @@
    con.close();
   }
  }
-
-
-
-%>
 </body>
 </html>
