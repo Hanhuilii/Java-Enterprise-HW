@@ -1,0 +1,12 @@
+There are five main strategies for NGINX load balancing:
+
+•Polling (default)
+Each request is assigned to a different backend server in chronological order and is automatically culled if the backend server goes down.
+•weight
+Specifies that the polling probability, WEIGHT, is proportional to the access ratio and is used when backend server performance is uneven.
+•ip hash
+Each request is assigned according to the hash result of the access IP, so that each visitor has fixed access to a backend server, which can solve the session problem.
+•FAIR (third party)
+Requests are allocated according to the response time of the back-end server, with short response times given priority.
+•URL hash (third party)
+The request is allocated according to the hash result of the accessed URL, so that each URL is directed to the same back-end server, which is more efficient for caching.
