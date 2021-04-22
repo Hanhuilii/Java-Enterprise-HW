@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>Processing</servlet-name>
+        <servlet-class>com.example.FirstLessonServlet.ProcessingServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Processing</servlet-name>
+        <url-pattern>/processing</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Download</servlet-name>
+        <servlet-class>com.example.FirstLessonServlet.DownloadServlet</servlet-class>
+        <multipart-config>
+            <max-file-size>51200</max-file-size>
+            <max-request-size>52224</max-request-size>
+            <file-size-threshold>4096</file-size-threshold>
+        </multipart-config>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Download</servlet-name>
+        <url-pattern>/Download</url-pattern>
+    </servlet-mapping>
+</web-app>
