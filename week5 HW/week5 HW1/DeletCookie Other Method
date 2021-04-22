@@ -1,0 +1,6 @@
+Method 1
+You can send a Cookie with the same name to the browser, because the browser is based on the name of the Cookie 
+(in fact, there are path, domain, do not set the default is the same) to distinguish a Cookie.
+if the two cookies sent before and after the same name, the browser will think that is the same Cookie,
+Then the later sent Cookie will overwrite the previous sent Cookie, and the later sent Cookie has set MAXAGE to 0,
+and the browser will delete the later sent Cookie immediately after receiving it.
