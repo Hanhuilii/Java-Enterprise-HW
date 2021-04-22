@@ -1,6 +1,5 @@
 
 4. Create the welcome page  "welcomeServlet"
-[code implementation]
 
 import java.io.IOException;
 import java.io.PrintWriter;
