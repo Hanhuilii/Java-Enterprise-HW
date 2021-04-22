@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="processing?name=韩卉丽&age=20">servlet处理超链接</a></br>
+<form method="post" action="Download" enctype="multipart/form-data">
+    名称:<input name="name"></br></br>
+    年龄:<input name="age"></br></br>
+    上传:<input type="file" name="file"></br></br>
+    <input type="reset"value="取消">
+    <input type="submit"value="提交"></br></br>
+</form>
+<form method="post"
+      action="/com.example.FirstLessonServlet.ProcessingServlet" enctype="multipart/form-data">
+    Select Beer characteristics<p>
+    Color:
+    <select name="color" size="1">
+        <option value="light"> light </option>
+        <option value="amber"> amber </option>
+        <option value="brown"> brown </option>
+        <option value="dark"> dark </option>
+    </select>
+    <br><br>
+    <center>
+        <button type="submit">Submit</button>
+    </center>
+
+    </p >
+</form>
+
+</body>
+</html>
