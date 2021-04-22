@@ -4,7 +4,7 @@ package com.exercises;
 import javax.servlet.http.*;
 import java.io.*;
  
-public class CookieDelete2 extends HttpServlet{
+public class DeleteCookie2 extends HttpServlet{
  
  //处理get请求
  
