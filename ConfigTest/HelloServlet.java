@@ -1,5 +1,3 @@
-Servlet
-
 package com.example.ConfigTest;
 
 import java.io.*;
