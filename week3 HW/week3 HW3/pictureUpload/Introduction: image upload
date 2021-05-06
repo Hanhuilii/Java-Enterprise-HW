@@ -1,0 +1,14 @@
+ ​    1.先将文件读入内存：(获取文件得真实路径)
+​      String realPath =request.getServletContext().getRealPath("images/xx.jpg");
+​     2.解决文件名乱码问题
+​      String filename = new  String ("xx.jpg".getBytes("utf-8"),"ISO-8856-1");
+​      FileInputStream fis = new FileInputStream(realPath);
+​     3.告诉浏览器该文件要下载：
+​        response.setHeader("Contentdisposition","attackment;filename="+filename);
+​     4.再把文件写出到客户端
+​      1.ServletOutputStream sos = response.getOutputStream();
+​      2.byte[] buff = new byte[1024];
+​      3.int len = 0;
+       4. while ((len= fis.read(buff)!=-1)){sos.writer(buff,0,len);}
+       5.sos.close();
+       6.fis.close();
